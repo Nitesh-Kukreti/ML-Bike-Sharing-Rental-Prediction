@@ -42,7 +42,7 @@ while True:
     print("1. Predict bikes for user input")
     print("2. Show graphs for individual conditions")
     print("3. Show Actual vs Predicted scatter plot")
-    print("n. Exit")
+    print("4. Exit")
     choice = input("Enter choice: ").lower()
 
     if choice == '1':
