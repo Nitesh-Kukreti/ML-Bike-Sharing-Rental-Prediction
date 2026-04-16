@@ -97,13 +97,19 @@ while True:
         plt.show()
 
     elif choice == '3':
-        # Calculate metrics
+        from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+        import numpy as np
+
         r2 = r2_score(y_val, pred_val)
         mae = mean_absolute_error(y_val, pred_val)
+        mse = mean_squared_error(y_val, pred_val)
+        rmse = np.sqrt(mse)
 
         print("\nModel Performance:")
         print(f"R² Score: {r2:.4f}")
         print(f"Mean Absolute Error: {mae:.2f} bikes")
+        print(f"Mean Squared Error: {mse:.2f}")
+        print(f"Root Mean Squared Error: {rmse:.2f} bikes")
 
         # Plot scatter
         plt.figure(figsize=(6,6))
